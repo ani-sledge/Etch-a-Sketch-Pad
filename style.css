@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+#sidebar {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	background-color: black;
+	border-bottom: 1px solid #333;
+}
+h1, form, button, #colors {
+	margin-left: 10px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+h1 {
+	display: inline;
+}
+form {
+	display: inline;
+}
+input {
+	width: 50px;
+}
+
+#colors {
+	position: absolute;
+	display: inline;
+	margin-top: 8px;
+}
+
+#colors div {
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+#red { background-color: red; }
+#blue { background-color: blue; }
+#yellow { background-color: yellow; }
+#green { background-color: green; }
+#orange { background-color: orange; }
+#purple { background-color: purple; }
+#black { background-color: #333; }
+
+#container {
+	width: 90%;
+	height: auto;
+	float: left;
+	clear: both;
+	margin-left: 5%;
+	position: absolute;
+	background-color: #fff;
+}
+div.pixel {
+	float: left;
+	position: relative;
+	width: 6.25%;
+	padding-bottom: 6.25%;
+    background-color: rgba(0,0,0,0);
+}
