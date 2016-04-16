@@ -1,7 +1,7 @@
 var currentSize = 16;
 var currentColor = "rgba(0,0,0,";
 
-var generate = function(sideLength) {
+var generateGrid = function(sideLength) {
 	var pixels = sideLength * sideLength; 
 	var size = (100 / sideLength) + "%"; 
 	for (var i = 0; i < pixels; i++) {
@@ -34,7 +34,7 @@ var setColor = function() {
 	});
 }
 
-var setHover = function() {
+var changePixelColor = function() {
 	$( "div.pixel" ).hover(function(evt) {
 		var thisColor = $( this ).css("background-color");
 		var colorArray = thisColor.split(",");
@@ -54,16 +54,16 @@ var setHover = function() {
 }
 
 $( document ).ready(function() {
-	generate(currentSize);
-    setHover();
+	generateGrid(currentSize);
+    changePixelColor();
     setColor();
 	$( "#refresh" ).click(function(evt) {
-		var number = Number($("input[name=size]").val());
-		if (!(isNaN(number)) && (number > 0)) {
-        	currentSize = number;
+		var gridWidth = Number($("input[name=size]").val());
+		if (!(isNaN(gridWidth)) && (gridWidth > 0)) {
+        	currentSize = gridWidth;
         }
 		$( "#container" ).empty();
-		generate(currentSize);
-		setHover();
+		generateGrid(currentSize);
+		changePixelColor();
 	});
 });
